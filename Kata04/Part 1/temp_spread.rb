@@ -1,5 +1,5 @@
-def small_spread
-  raw_data = File.readlines('weather.dat').map { |line| line.split(' ') }
+def small_spread(file)
+  raw_data = File.readlines(file).map { |line| line.split(' ') }
   raw_data.shift(2)
   raw_data.pop
 
@@ -12,6 +12,9 @@ def small_spread
     index = index + 1
   end
   temp_spread = temp_spread.sort_by { |a,b| b }
+  day = temp_spread[0][0]
+  low_spread = temp_spread[0][1]
+  return "The smallest temperature spread was #{low_spread}, recorded on day #{day}."
 end
 
-p small_spread
+p small_spread('test/weather_test.dat')
