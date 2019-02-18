@@ -17,4 +17,4 @@ def small_spread(file)
   return "The smallest temperature spread was #{low_spread}, recorded on day #{day}."
 end
 
-p small_spread('test/weather_test.dat')
+p small_spread('weather.dat')
