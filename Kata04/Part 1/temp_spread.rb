@@ -11,7 +11,7 @@ def small_spread
     temp_spread << [raw_data[index][0], spread]
     index = index + 1
   end
-  temp_spread = temp_spread.sort_by
+  temp_spread = temp_spread.sort_by { |a,b| b }
 end
 
 p small_spread
