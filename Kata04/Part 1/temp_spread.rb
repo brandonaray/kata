@@ -11,7 +11,7 @@ def small_spread(file)
     temp_spread << [raw_data[index][0], spread]
     index = index + 1
   end
-  temp_spread = temp_spread.sort_by { |a,b| b }
+  temp_spread = temp_spread.sort_by { |b| b }
   day = temp_spread[0][0]
   low_spread = temp_spread[0][1]
   return "The smallest temperature spread was #{low_spread}, recorded on day #{day}."
